@@ -1,130 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>search</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            background: #fff;
-            justify-content: space-between;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>search</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      background: #fff;
+      justify-content: space-between;
+      
+    }
 
-        .top-bar{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-        }
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+    }
 
-        .bottom {
-            padding: 10px;
-        }
+    .bottom {
+      padding: 10px;
+    }
 
-        .suggestions {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 10px;
-            overflow-x: auto;
-            scrollbar-width: none;
-            -webkit-overflow-scrolling: touch;
-        }
+    .suggestions {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+    .suggestions::-webkit-scrollbar {
+      display: none;
+    }
 
-        .suggestions::-webkit-scrollbar {
-            display: none;
-        }
+    .suggestions button {
+      flex: 0 0 auto;
+      padding: 12px;
+      border: none;
+      border-radius: 12px;
+      background: #f5f5f5;
+      font-size: 14px;
+      cursor: pointer;
+      text-align: left;
+      min-width: 160px;
+    }
+    .suggestions button small {
+      display: block;
+      font-weight: normal;
+      font-size: 12px;
+      color: #777;
+    }
 
-        .suggestions button {
-            flex: 0 0 auto;
-            padding: 12px;
-            border: none;
-            border-radius: 12px;
-            background: #f5f5f5;
-            font-size: 14px;
-            cursor: pointer;
-            text-align: left;
-            min-width: 160px ;
-        }
-        .suggestion button small {
-            display: block;
-            font-weight: normal;
-            font-size: 12px;
-            color: #777;
-        }
+    .input-area {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 8px 12px;
+    }
 
-        .input-area {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            padding: 8px 12px;
-        }
-
-        .pill {
-            display:flex;
-            width: 100vh;
-            border: 1px solid black;
-            border-radius: 20px;
-            padding: 6px 10px;
-        }
-        .input-area input {
-            flex: 1;
-            border: none;
-            outline: none;
-            font-size: 14px;
-        }
-        .plus {
-            border: 1px solid black;
-            border-radius:20px;
-            padding: 10px 13px;
-        }
-
-        .mic-icon {
-            font-size: 20px;
-            cursor: pointer;
-        }
-    </style>
+    .pill {
+      display: flex;
+      flex: 1; /* Take remaining space */
+      border: 1px solid black;
+      border-radius: 20px;
+      padding: 6px 10px;
+      max-width: 100%; /* Prevent overflow */
+    }
+    .input-area input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 14px;
+    }
+    .plus {
+      border: 1px solid black;
+      border-radius: 20px;
+      padding: 10px 13px;
+      background: #ccc;
+    }
+    .mic-icon {
+      font-size: 20px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-<div class="top-bar">
+  <div class="top-bar">
     <div class="menu">=</div>
-</div>    
-        <div class="bottom">
-            <div class="suggestions">
-                <button>
-                Create a painting <br>
-                <small>Renaissance style</small>
-                </button>
-                  <button>
-                Create a painting <br>
-                <small>Renaissance style</small>
-                </button>
-                  <button>
-                Create a painting <br>
-                <small>Renaissance style</small>
-                </button>
-                <button>
-                Create a painting <br>
-                <small>Renaissance style</small>
-                </button>
-                <button>
-                Create a painting <br>
-                <small>Renaissance style</small>
-                </button>
-            </div>
-            <div class="input-area">
-                <span class="plus">+</span>
-                <div class="pill">
-                <input type="text" placeholder="ask anything">
-                <span class="mic-icon">🎤</span>
-                </div>
-            </div>
+  </div>
+  <div class="bottom">
+    <div class="suggestions">
+      <button>Create a painting <br><small>Renaissance style</small></button>
+      <button>Create a painting <br><small>Renaissance style</small></button>
+      <button>Create a painting <br><small>Renaissance style</small></button>
+      <button>Create a painting <br><small>Renaissance style</small></button>
+      <button>Create a painting <br><small>Renaissance style</small></button>
     </div>
-</div>
+    <div class="input-area">
+      <span class="plus">+</span>
+      <div class="pill">
+        <input type="text" placeholder="ask anything">
+        <span class="mic-icon">🎤</span>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
